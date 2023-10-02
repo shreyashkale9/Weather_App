@@ -5,6 +5,7 @@ const WeatherLogo = styled.img`
 width:140px;
 height:140px;
 margin:40px auto;
+img:
 `
 const ChooseCityLabel = styled.span`
 color:black;
@@ -45,7 +46,7 @@ const CityComponent = (props) => {
     const { updateCity, fetchWeather } = props;
     return (
         <>
-            <WeatherLogo src="Icons/weatherlogo.jpeg" />
+            <WeatherLogo src="/Icons/weatherlogo.jpeg" alt=""/>
             <ChooseCityLabel>Enter City</ChooseCityLabel>
             <SearchBox onSubmit={fetchWeather}>
                 <input placeholder="City" onChange={(e) => updateCity(e.target.value)}></input>
